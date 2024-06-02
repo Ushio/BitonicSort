@@ -26,9 +26,8 @@ std::vector<int> sort_bitonic( std::vector<int> xs0 )
 
 					if (swap)
 					{
-						std::swap(a, b);
-						xs0[i] = a;
-						xs0[pair] = b;
+						xs0[i] = b;
+						xs0[pair] = a;
 					}
 				}
 			}
@@ -80,9 +79,8 @@ int main()
 
 					if( swap )
 					{
-						std::swap( a, b );
-						xs0[i] = a;
-						xs0[pair] = b;
+						xs0[i] = b;
+						xs0[pair] = a;
 					}
 
 					printf("o ");
