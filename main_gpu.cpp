@@ -41,7 +41,7 @@ int main() {
 
 	if (isNvidia)
 	{
-		options.push_back("--gpu-architecture=compute_70");
+		// options.push_back("--gpu-architecture=compute_70");
 		options.push_back(NV_ARG_LINE_INFO);
 	}
 	else
@@ -59,8 +59,8 @@ int main() {
 	//}
 
 	Shader shader((baseDir + "\\kernel.cu").c_str(), "kernel.cu", options );
-
-	int blocks = 256 * 256 * 32;
+	// int blocks = 1;
+	int blocks = 1024 * 1024 * 4;
 
 	std::vector<int> bufferCPU(N_ELEM_PER_BLOCK * blocks);
 	for (int i = 0; i < bufferCPU.size(); i++)
